@@ -13,10 +13,10 @@ import { Container } from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="raleway">
+    <main className="raleway">
       <Navbar />
       
-      <Container fluid className='bg-dark bg-gradient text-light vh-fill text-center'>
+      <Container fluid className='bg-dark bg-gradient text-light text-center'>
         <Routes>
           <Route element={<Home />} path="/" />
           <Route element={<About />} path="/about" />
@@ -26,7 +26,7 @@ function App() {
           <Route element={<Contact />} path="/contact" />
         </Routes>
       </Container>
-    </div>
+    </main>
   );
 }
 

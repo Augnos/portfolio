@@ -5,7 +5,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 export default () => {
 
     return (
-        <Navbar bg="dark" variant="dark" expand="md">
+        <Navbar bg="dark" variant="dark" expand="md" className='navbarstyle'>
             <Container>
                 <Navbar.Brand as={NavLink} to="/" className='font-purple'>Josh Valdez</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
