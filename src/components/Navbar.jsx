@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 export default () => {
 
@@ -15,8 +14,12 @@ export default () => {
                         <Nav.Link as={NavLink} to="/about">About</Nav.Link>
                         <Nav.Link as={NavLink} to="/skills">Skills</Nav.Link>
                         <Nav.Link as={NavLink} to="/projects">Projects</Nav.Link>
-                        <Nav.Link as={NavLink} to="/challenges">Coding Challenges</Nav.Link>
-                        <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
+                        {/* <Nav.Link as={NavLink} to="/challenges">Coding Challenges</Nav.Link> */}
+                        <NavDropdown title="Contact" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="https://linkedin.com/in/augnos" target="_blank">LinkedIn</NavDropdown.Item>
+                            <NavDropdown.Item href="https://github.com/augnos" target="_blank">GitHub</NavDropdown.Item>
+                            <NavDropdown.Item href="https://docs.google.com/document/d/1xloDQsroSO-r-9ffeNDCQsj8gCF9tQvWTDCHFc99PTM/edit?usp=sharing" target="_blank">Resume</NavDropdown.Item>
+                        </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
