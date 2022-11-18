@@ -1,0 +1,16 @@
+// import the functions & variables
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+$custom-theme-colors: (
+    "lavender": #e0d9f6,
+    "sky": #6ecbf5,
+    "orchid": #c252e1,
+    "royal": #586ae2,
+    "midnight": #2a2356,
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+// import bootstrap 
+@import '../node_modules/bootstrap/scss/bootstrap';

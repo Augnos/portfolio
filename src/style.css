@@ -1,0 +1,58 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.sono {
+    font-family: 'Sono', sans-serif;
+}
+
+.raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Dark, gradient background, light text */
+/* html {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
+} */
+
+.navbarstyle {
+    z-index: 1000;
+}
+
+/* .text-red {
+    color: #fbcfea
+}
+
+.text-yellow {
+    color: #feffbe
+}
+
+.text-green {
+    color: #cbffe6
+}
+
+.text-blue {
+    color: #afe9ff
+}
+
+.text-purple {
+    color: #bfb9fe
+} */
+
+.vh-fill {
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+
+code {color: black}
+table * code {color: white}

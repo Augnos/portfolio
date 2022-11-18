@@ -1,5 +1,5 @@
-import "../node_modules/bootstrap/dist/css/bootstrap.css"
 import "./App.css";
+import "./style.css";
 
 import Navbar from "./components/Navbar";
 import Home from "./views/Home";
@@ -7,26 +7,25 @@ import About from "./views/About";
 import Skills from "./views/Skills";
 import Projects from "./views/Projects";
 import Challenges from "./views/Challenges";
-import Contact from "./views/Contact";
+import NotFound from "./views/NotFound";
 import { Routes, Route, use } from "react-router-dom";
-import { Container } from 'react-bootstrap';
 
 function App() {
   return (
     <main className="raleway">
       <Navbar />
-      
-      <Container fluid className='bg-dark bg-gradient text-light text-center'>
+
+      <div className='text-center'>
         <Routes>
-          <Route element={<Home />} path="/" />
-          <Route element={<About />} path="/about" />
-          <Route element={<Skills />} path="/skills" />
-          <Route element={<Projects />} path="/projects" />
-          <Route element={<Challenges />} path="/challenges" />
-          <Route element={<Contact />} path="/contact" />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/challenges/*" element={<Challenges />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      </Container>
-    </main>
+      </div>
+    </main >
   );
 }
 
