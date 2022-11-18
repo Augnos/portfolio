@@ -16,8 +16,8 @@ export default () => {
             <Nav.Link as={NavLink} to="/projects">Projects</Nav.Link>
             <Nav.Link as={NavLink} to="/challenges" className='d-none d-lg-flex'>Coding Challenges</Nav.Link>
             <NavDropdown title="Coding Challenges" id="basic-nav-dropdown" className='d-lg-none'>
-              <NavDropdown.Item href="/challenges/">Main</NavDropdown.Item>
-              <NavDropdown.Item href="/challenges/bracketstacks">BracketStacks</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/challenges/">Main</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/challenges/bracketstacks">BracketStacks</NavDropdown.Item>
               {/* <NavDropdown.Item href="/challenges/tacocat">Taco Cat</NavDropdown.Item> */}
             </NavDropdown>
             <NavDropdown title="Contact" id="basic-nav-dropdown">
