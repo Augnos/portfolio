@@ -18,7 +18,7 @@ export default () => {
             <NavDropdown title="Coding Challenges" id="basic-nav-dropdown" className='d-lg-none'>
               <NavDropdown.Item as={NavLink} to="/challenges/">Main</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/challenges/bracketstacks">BracketStacks</NavDropdown.Item>
-              {/* <NavDropdown.Item href="/challenges/tacocat">Taco Cat</NavDropdown.Item> */}
+              {/* <NavDropdown.Item as={NavLink} to="/challenges/tacocat">Taco Cat</NavDropdown.Item> */}
             </NavDropdown>
             <NavDropdown title="Contact" id="basic-nav-dropdown">
               <NavDropdown.Item href="https://linkedin.com/in/augnos" target="_blank">LinkedIn</NavDropdown.Item>
