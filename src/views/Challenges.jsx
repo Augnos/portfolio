@@ -19,7 +19,7 @@ export default function Challenges() {
         </Col>
 
         {/* Main Window */}
-        <Col xl={10} lg={9} className="">
+        <Col xl={10} lg={9} className="bg-lavender">
           <Routes>
             <Route index element={<ChallengeIndex />} />
             <Route path="bracketstacks" element={<BracketStacks />} />
