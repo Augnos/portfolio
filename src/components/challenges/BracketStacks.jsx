@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 export default function BracketStacks() {
   const [input, setInput] = useState("");
@@ -50,8 +50,12 @@ export default function BracketStacks() {
 
         <div className="col">
           <h1>BracketStacks</h1>
-          <p className="lead text-start">Given the string <code>{"[()]{ }{[()()]()}"}</code>, write a function that takes a string parameter containing brackets, determine if all brackets have a matching counterpart. If all brackets in the string form balanced pairs, return true. If not, return false.</p>
-          <p className="lead">What are balanced brackets?</p>
+          <h4>Brackat balance checker</h4>
+          <div className="lead text-start">
+            <p>Given a string with <code>{"(parantheses)"}</code>, <code>{"[square brackets]"}</code>, and <code>{"{curly braces}"}</code>, 
+            this challenge determines if all brackets have a matching counterpart and close properly.</p>
+            <p>What are balanced brackets?</p>
+          </div>
           <table className="table table-dark table-striped text-lavender">
             <thead>
               <tr>
@@ -67,26 +71,31 @@ export default function BracketStacks() {
                 <td><button type="button" className='btn btn-sky btn-sm' onClick={() => isBalanced("([{ }])")}>Test</button></td>
               </tr>
               <tr>
+                <td><code>{"func{(param) [array]}"}</code></td>
+                <td>✅</td>
+                <td><button type="button" className='btn btn-sky btn-sm' onClick={() => isBalanced("func{(param) [array]}")}>Test</button></td>
+              </tr>
+              <tr>
+                <td><code>{")"}</code></td>
+                <td>❌</td>
+                <td><button type="button" className='btn btn-sky btn-sm' onClick={() => isBalanced(")")}>Test</button></td>
+              </tr>
+              <tr>
+                <td><code>{"{[]"}</code></td>
+                <td>❌</td>
+                <td><button type="button" className='btn btn-sky btn-sm' onClick={() => isBalanced("{[]")}>Test</button></td>
+              </tr>
+              <tr>
                 <td><code>{"[(])"}</code></td>
                 <td>❌</td>
                 <td><button type="button" className='btn btn-sky btn-sm' onClick={() => isBalanced("[(])")}>Test</button></td>
-              </tr>
-              <tr>
-                <td><code>{"{(})[]"}</code></td>
-                <td>❌</td>
-                <td><button type="button" className='btn btn-sky btn-sm' onClick={() => isBalanced("{(})[]")}>Test</button></td>
-              </tr>
-              <tr>
-                <td><code>{"{()[]}"}</code></td>
-                <td>✅</td>
-                <td><button type="button" className='btn btn-sky btn-sm' onClick={() => isBalanced("{()[]}")}>Test</button></td>
               </tr>
             </tbody>
           </table>
           <h5 >{balance}</h5>
           <div className='input-group mb-3'>
             <input className='form-control input font-monospace' onChange={e => isBalanced(e.target.value)} value={input} />
-            <td><button type="button" className='btn btn-orchid' onClick={() => isBalanced("")}>Clear</button></td>
+            <td><button type="button" className='btn btn-outline-midnight' onClick={() => isBalanced("")}>Clear</button></td>
           </div>
 
         </div>

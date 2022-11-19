@@ -13,9 +13,9 @@ export default function Challenges() {
         {/* Side Nav */}
         <Col xl={2} lg={3} className="d-none d-lg-flex h-100 align-self-start flex-column text-start pt-3 bg-midnight text-light">
           <h4 className='text-sky'>Coding Challenges</h4>
-          <p>Here are some common coding challenges, solved with JavaScript.</p>
+          <p>Tap below to load challenge.</p>
           <NavLink to="/challenges/bracketstacks"><Button variant="outline-lavender" className='mb-2'>BracketStacks</Button></NavLink>
-          {/* <NavLink to="/challenges/tacocat"><Button variant="outline-lavender" className='mb-2'>TacocaT</Button></NavLink> */}
+          <NavLink to="/challenges/tacocat"><Button variant="outline-lavender" className='mb-2'>TacocaT</Button></NavLink>
 
         </Col>
 
@@ -23,7 +23,7 @@ export default function Challenges() {
         <Routes>
           <Route index element={<ChallengeIndex />} />
           <Route path="bracketstacks" element={<BracketStacks />} />
-          {/* <Route path="tacocat" element={<TacoCat />} /> */}
+          <Route path="tacocat" element={<TacoCat />} />
         </Routes>
 
       </Row>
