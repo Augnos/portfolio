@@ -7,7 +7,7 @@ import { IconContext } from 'react-icons';
 
 export default function Skills() {
   return (
-    <Container fluid className="vh-fill bg-lavender text-midnight bg-gradient">
+    <Container fluid className="vh-100">
       <Row className='h-100 align-items-center'>
         <Col>
 

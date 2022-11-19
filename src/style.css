@@ -10,16 +10,6 @@
     font-family: 'Raleway', sans-serif;
 }
 
-/* Dark, gradient background, light text */
-/* html {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-    --bs-text-opacity: 1;
-    color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
-} */
-
 .navbarstyle {
     z-index: 1000;
 }
@@ -56,3 +46,21 @@
 
 code {color: black}
 table * code {color: white}
+
+.bracketstacks {
+    background-image: url("/public/images/brackets.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #dddd;
+    background-blend-mode: overlay;
+}
+
+.tacocat {
+    background-image: url("/public/images/tacocat.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #eeee;
+    background-blend-mode: overlay;
+}

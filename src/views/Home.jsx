@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 export default function Home() {
     return (
-        <Container fluid className='vh-fill bg-lavender text-midnight bg-gradient'>
+        <Container fluid className='vh-100'>
             <Row className='h-100 align-items-center'>
                 <Col className=''>
                     <h1>Hi, I'm <span className='text-midnight'>Josh Valdez</span>.</h1>

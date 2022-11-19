@@ -4,7 +4,7 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 export default () => {
 
   return (
-    <Navbar bg="midnight" variant="dark" expand="lg" className='navbarstyle'>
+    <Navbar bg="midnight" variant="dark" expand="lg">
       <Container fluid className='mx-md-5'>
         <Navbar.Brand as={NavLink} to="/" className='text-lavender fs-4'>Josh Valdez</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -14,13 +14,14 @@ export default () => {
             <Nav.Link as={NavLink} to="/about">About</Nav.Link>
             <Nav.Link as={NavLink} to="/skills">Skills</Nav.Link>
             <Nav.Link as={NavLink} to="/projects">Projects</Nav.Link>
-            <Nav.Link as={NavLink} to="/challenges" className='d-none d-lg-flex'>Coding Challenges</Nav.Link>
+            <NavDropdown.Divider />
 
-            <NavDropdown title="Coding Challenges" id="basic-nav-dropdown" className='d-lg-none'>
+            <Nav.Link as={NavLink} to="/challenges" className='d-none d-lg-flex'>Coding Challenges</Nav.Link>
+            <Nav.Link as={NavDropdown} title="Coding Challenges" id="basic-nav-dropdown" className='d-lg-none'>
               <NavDropdown.Item as={NavLink} to="/challenges/">Main</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/challenges/bracketstacks">BracketStacks</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/challenges/tacocat">Taco Cat</NavDropdown.Item>
-            </NavDropdown>
+            </Nav.Link>
 
             <NavDropdown title="Contact" id="basic-nav-dropdown">
               <NavDropdown.Item href="https://linkedin.com/in/augnos" target="_blank">LinkedIn</NavDropdown.Item>
