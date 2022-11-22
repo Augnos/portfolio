@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import js_beautify from 'js-beautify';
 
 export default function TacoCat() {
   const [input, setInput] = useState("");
@@ -22,12 +23,14 @@ export default function TacoCat() {
     return setPalindrome("Palindrome!");
   }
 
+  const isPalindromeStr = js_beautify(String(isPalindrome));
+
 
   return (
 
     <Row className='tacocat h-100'>
 
-      <div className="col-xl-5 col-10 m-auto">
+<div className="col-xl-4 col-10 m-xl-auto mt-3 mx-auto">
         <h1>TacocaT</h1>
         <h4>A palindrome checker</h4>
         <div className="lead text-start">
@@ -73,8 +76,8 @@ export default function TacoCat() {
 
       </div>
 
-      <div className="col-xl-5 col-10 m-auto pt-3 text-start bg-midnight opacity-75 rounded rounded-3">
-        <pre><code className='text-white'>const isPalindrome = {String(isPalindrome)}</code></pre>
+      <div className="col-xl-7 col-10 m-auto pt-3 text-start bg-midnight opacity-75 rounded rounded-3">
+        <pre><code className='text-white'>{isPalindromeStr}</code></pre>
       </div>
 
 

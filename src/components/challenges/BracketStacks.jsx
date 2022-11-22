@@ -1,3 +1,4 @@
+import { js_beautify } from 'js-beautify';
 import { React, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
@@ -43,9 +44,12 @@ export default function BracketStacks() {
     return setBalance(stack[0] === undefined ? "Balanced!" : "NOT balanced");
   }
 
+  const isBalancedStr = js_beautify(String(isBalanced));
+
+
   return (
     <Row className='bracketstacks h-100'>
-      <div className="col-xl-5 col-10 m-auto">
+      <div className="col-xl-4 col-10 m-xl-auto mt-3 mx-auto">
         <h1>BracketStacks</h1>
         <h4>Brackat balance checker</h4>
         <div className="lead text-start">
@@ -97,8 +101,8 @@ export default function BracketStacks() {
 
       </div>
 
-      <div className="col-xl-5 col-10 m-auto pt-3 text-start bg-midnight opacity-75 rounded rounded-3">
-        <pre><code className='text-white'>const isBalanced = {String(isBalanced)}</code></pre>
+      <div className="col-xl-7 col-10 m-auto pt-3 text-start bg-midnight opacity-75 rounded rounded-3">
+        <pre><code className='text-white'>{isBalancedStr}</code></pre>
       </div>
 
     </Row>
