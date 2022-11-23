@@ -1,16 +1,18 @@
-import { js_beautify } from 'js-beautify';
 import { React, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function BracketStacks() {
   const [input, setInput] = useState("");
   const [balance, setBalance] = useState("Try for yourself!");
 
+
   const isBalanced = (input) => {
     setInput(input); // updates state of input box
     if (input === "") return setBalance("Try for yourself!");
 
-    let stack = [];       // used to check brackets
+    let stack = [];       // working array
     let detected = false; // variable for detecting brackets in input
     let openBrack = ["(", "[", "{"];  // an array of all open brackets
     let closeBrack = [")", "]", "}"]; // an array of all close brackets
@@ -24,11 +26,15 @@ export default function BracketStacks() {
 
     for (let i = 0; i < input.length; i++) {
       let item = input[i];
+
+      // when open bracket detected, it is pushed to the stack
       if (openBrack.includes(item)) {
         detected = true;
         stack.push(item);
         continue;
       }
+
+      // when close bracket detected...
       if (closeBrack.includes(item)) {
         detected = true;
         let popped = stack.pop();
@@ -40,11 +46,53 @@ export default function BracketStacks() {
     // return statement when input made but no brackets present
     if (!detected) return setBalance("Waiting for brackets...");
 
-    // empty stack array after loop will return true.
+    // returns true if the stack is clear after the for loop completes.
     return setBalance(stack[0] === undefined ? "Balanced!" : "NOT balanced");
   }
 
-  const isBalancedStr = js_beautify(String(isBalanced));
+
+  const isBalancedStr =
+    `const isBalanced = (input) => {
+    setInput(input); // updates state of input box
+    if (input === "") return setBalance("Try for yourself!");
+
+    let stack = [];       // working array
+    let detected = false; // variable for detecting brackets in input
+    let openBrack = ["(", "[", "{"];  // an array of all open brackets
+    let closeBrack = [")", "]", "}"]; // an array of all close brackets
+
+    // this object is called to check closing brackets against the previous bracket
+    const pairedBracks = {
+      "(": ")",
+      "[": "]",
+      "{": "}"
+    };
+
+    for (let i = 0; i < input.length; i++) {
+      let item = input[i];
+
+      // when open bracket detected, it is pushed to the stack
+      if (openBrack.includes(item)) {
+        detected = true;
+        stack.push(item);
+        continue;
+      }
+
+      // when close bracket detected...
+      if (closeBrack.includes(item)) {
+        detected = true;
+        let popped = stack.pop();
+        // return statement when closing bracket doesn't match previous bracket
+        if (pairedBracks[popped] != item) return setBalance("NOT balanced");
+        continue;
+      }
+    }
+    // return statement when input made but no brackets present
+    if (!detected) return setBalance("Waiting for brackets...");
+
+    // returns true if the stack is clear after the for loop completes.
+    return setBalance(stack[0] === undefined ? "Balanced!" : "NOT balanced");
+  }`
 
 
   return (
@@ -98,11 +146,16 @@ export default function BracketStacks() {
           <input className='form-control input font-monospace' onChange={e => isBalanced(e.target.value)} value={input} />
           <td><button type="button" className='btn btn-outline-midnight' onClick={() => isBalanced("")}>Clear</button></td>
         </div>
+        <div>
+          <a href="https://github.com/Augnos/portfolio/blob/master/src/components/challenges/BracketStacks.jsx" target="_blank" className='text-royal fs-3 fw-light'>GitHub</a>
+        </div>
 
       </div>
 
       <div className="col-xl-7 col-10 m-auto pt-3 text-start bg-midnight opacity-75 rounded rounded-3">
-        <pre><code className='text-white'>{isBalancedStr}</code></pre>
+        <SyntaxHighlighter language='javascript' style={dracula}>
+          {isBalancedStr}
+        </SyntaxHighlighter>
       </div>
 
     </Row>

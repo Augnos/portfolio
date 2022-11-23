@@ -1,10 +1,12 @@
 import { React, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import js_beautify from 'js-beautify';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function TacoCat() {
   const [input, setInput] = useState("");
   const [palindrome, setPalindrome] = useState("Try for yourself!");
+
 
   const isPalindrome = (palindrome) => {
     setInput(palindrome);
@@ -23,14 +25,31 @@ export default function TacoCat() {
     return setPalindrome("Palindrome!");
   }
 
-  const isPalindromeStr = js_beautify(String(isPalindrome));
+
+  const isPalindromeStr = `
+    const isPalindrome = (palindrome) => {
+      // regex removes all spaces and punctuation, converts to all lower case
+      let chars = palindrome.replace(/[^a-zA-Z]+/g, '').toLowerCase();
+  
+      // for loop will check first and last characters,
+      // and work inwards after every check
+      for (let i = 0; i < (chars.length / 2); i++) {
+
+        // if there's a mismatch, return false
+        if (chars[i] != chars[chars.length - i - 1]) {
+          return false
+        }
+      }
+  
+      // if there were no mismatches after reaching the middle...
+      return true;
+    }
+  `;
 
 
   return (
-
     <Row className='tacocat h-100'>
-
-<div className="col-xl-4 col-10 m-xl-auto mt-3 mx-auto">
+      <div className="col-xl-4 col-10 m-xl-auto mt-3 mx-auto">
         <h1>TacocaT</h1>
         <h4>A palindrome checker</h4>
         <div className="lead text-start">
@@ -74,14 +93,19 @@ export default function TacoCat() {
           <td><button type="button" className='btn btn-outline-midnight' onClick={() => isPalindrome("")}>Clear</button></td>
         </div>
 
+        <div>
+          <a href="https://github.com/Augnos/portfolio/blob/master/src/components/challenges/TacoCat.jsx" target="_blank" className='text-royal fs-3 fw-light'>GitHub</a>
+        </div>
+
+
       </div>
 
       <div className="col-xl-7 col-10 m-auto pt-3 text-start bg-midnight opacity-75 rounded rounded-3">
-        <pre><code className='text-white'>{isPalindromeStr}</code></pre>
+        <SyntaxHighlighter language='javascript' style={dracula}>
+          {isPalindromeStr}
+        </SyntaxHighlighter>
       </div>
 
-
     </Row>
-
   )
 }

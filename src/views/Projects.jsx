@@ -18,12 +18,12 @@ export default function Projects() {
 
             <Col sm={12} md={6} lg={4}>
               <a href='https://silversun.augnos.dev' target="_blank" className='text-decoration-none'>
-                <Card bg={"black"} text={"light"} className="my-3 py-2 mx-3">
+                <Card bg={"light"} text={"midnight"} className="my-3 py-2 mx-3 bg-gradient bg-opacity-50">
                   <div className='row justify-content-center align-items-center'>
-                    <img src='https://silversun.augnos.dev/static/img/photos/lg_studio_a_engineer.jpg' className="img img-fluid" />
+                    <img src='/images/silversun.png' className="img img-fluid" />
                   </div>
                   <Card.Body>
-                    <Card.Title className='text-sky'>Silversun Studios</Card.Title>
+                    <Card.Title className='text-orchid'>Silversun Studios</Card.Title>
                     <Card.Text>Automated booking site for audio recording studios. A demo created with Python and Flask.</Card.Text>
                   </Card.Body>
                 </Card>
@@ -32,12 +32,12 @@ export default function Projects() {
 
             <Col sm={12} md={6} lg={4}>
               <a href='https://go.augnos.com' target="_blank" className='text-decoration-none'>
-                <Card bg={"black"} text={"light"} className="my-3 py-2 mx-3">
+              <Card bg={"light"} text={"midnight"} className="my-3 py-2 mx-3 bg-gradient bg-opacity-50">
                   <div className='row justify-content-center align-items-center'>
-                    <img src='https://go.augnos.com/static/images/go_augnos_com.jpg' className="img img-fluid" />
+                    <img src='/images/linktree.png' className="img img-fluid" />
                   </div>
                   <Card.Body>
-                    <Card.Title className='text-sky'>Linktree Clone</Card.Title>
+                    <Card.Title className='text-orchid'>Linktree Clone</Card.Title>
                     <Card.Text>A stylish, mobile-friendly, and regularly updated site displaying links relevant to my personal brand. Created with Python and Flask.</Card.Text>
                   </Card.Body>
                 </Card>
