@@ -43,17 +43,17 @@ export default function TacoCat() {
   
       // if there were no mismatches after reaching the middle...
       return true;
-    }
-  `;
+    }`;
 
 
   return (
-    <Row className='tacocat h-100'>
-      <div className="col-xl-4 col-10 m-xl-auto mt-3 mx-auto">
+    <Row className='tacocat py-3 mb-auto'>
+      <div className="col-xl-4 col-10 m-xl-auto mx-auto">
         <h1>TacocaT</h1>
         <h4>A palindrome checker</h4>
         <div className="lead text-start">
-          <p>A palindrome is a word, phrase, or other sequence of characters which reads the same backward as forward, such as madam or racecar.</p>
+          <p>Given a string, this code checks whether the string is a palindrome or not.</p>
+          <p>A palindrome is a word, phrase, or other sequence of characters which reads the same backward as forward, such as <i>madam</i> or <i>racecar</i>.</p>
           <p><strong>Note:</strong> This function ignores spaces and punctuation.</p>
         </div>
         <table className="table table-dark table-striped text-lavender">
@@ -94,9 +94,10 @@ export default function TacoCat() {
         </div>
 
         <div>
-          <a href="https://github.com/Augnos/portfolio/blob/master/src/components/challenges/TacoCat.jsx" target="_blank" className='text-royal fs-3 fw-light'>GitHub</a>
+          <a href="https://github.com/Augnos/portfolio/blob/master/src/components/challenges/TacoCat.jsx" target="_blank" className='text-royal fs-5 fw-light'>
+            See full component code on GitHub.
+          </a>
         </div>
-
 
       </div>
 

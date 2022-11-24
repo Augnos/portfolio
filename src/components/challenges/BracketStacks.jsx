@@ -51,58 +51,58 @@ export default function BracketStacks() {
   }
 
 
-  const isBalancedStr =
-    `const isBalanced = (input) => {
-    setInput(input); // updates state of input box
-    if (input === "") return setBalance("Try for yourself!");
+  const isBalancedStr = `
+    const isBalanced = (input) => {
+      setInput(input); // updates state of input box
+      if (input === "") return setBalance("Try for yourself!");
 
-    let stack = [];       // working array
-    let detected = false; // variable for detecting brackets in input
-    let openBrack = ["(", "[", "{"];  // an array of all open brackets
-    let closeBrack = [")", "]", "}"]; // an array of all close brackets
+      let stack = [];       // working array
+      let detected = false; // variable for detecting brackets in input
+      let openBrack = ["(", "[", "{"];  // an array of all open brackets
+      let closeBrack = [")", "]", "}"]; // an array of all close brackets
 
-    // this object is called to check closing brackets against the previous bracket
-    const pairedBracks = {
-      "(": ")",
-      "[": "]",
-      "{": "}"
-    };
+      // this object is called to check closing brackets against the previous bracket
+      const pairedBracks = {
+        "(": ")",
+        "[": "]",
+        "{": "}"
+      };
 
-    for (let i = 0; i < input.length; i++) {
-      let item = input[i];
+      for (let i = 0; i < input.length; i++) {
+        let item = input[i];
 
-      // when open bracket detected, it is pushed to the stack
-      if (openBrack.includes(item)) {
-        detected = true;
-        stack.push(item);
-        continue;
+        // when open bracket detected, it is pushed to the stack
+        if (openBrack.includes(item)) {
+          detected = true;
+          stack.push(item);
+          continue;
+        }
+
+        // when close bracket detected...
+        if (closeBrack.includes(item)) {
+          detected = true;
+          let popped = stack.pop();
+          // return statement when closing bracket doesn't match previous bracket
+          if (pairedBracks[popped] != item) return setBalance("NOT balanced");
+          continue;
+        }
       }
+      // return statement when input made but no brackets present
+      if (!detected) return setBalance("Waiting for brackets...");
 
-      // when close bracket detected...
-      if (closeBrack.includes(item)) {
-        detected = true;
-        let popped = stack.pop();
-        // return statement when closing bracket doesn't match previous bracket
-        if (pairedBracks[popped] != item) return setBalance("NOT balanced");
-        continue;
-      }
-    }
-    // return statement when input made but no brackets present
-    if (!detected) return setBalance("Waiting for brackets...");
-
-    // returns true if the stack is clear after the for loop completes.
-    return setBalance(stack[0] === undefined ? "Balanced!" : "NOT balanced");
-  }`
+      // returns true if the stack is clear after the for loop completes.
+      return setBalance(stack[0] === undefined ? "Balanced!" : "NOT balanced");
+    }`;
 
 
   return (
-    <Row className='bracketstacks h-100'>
-      <div className="col-xl-4 col-10 m-xl-auto mt-3 mx-auto">
+    <Row className='bracketstacks py-3'>
+      <div className="col-xl-4 col-10 mx-auto">
         <h1>BracketStacks</h1>
-        <h4>Brackat balance checker</h4>
+        <h4>Bracket balance checker</h4>
         <div className="lead text-start">
           <p>Given a string with <code>{"(parantheses)"}</code>, <code>{"[square brackets]"}</code>, and <code>{"{curly braces}"}</code>,
-            this challenge determines if all brackets have a matching counterpart and close properly.</p>
+            this code determines if all brackets have a matching counterpart and close properly.</p>
           <p>What are balanced brackets?</p>
         </div>
         <table className="table table-dark table-striped text-lavender">
@@ -147,7 +147,9 @@ export default function BracketStacks() {
           <td><button type="button" className='btn btn-outline-midnight' onClick={() => isBalanced("")}>Clear</button></td>
         </div>
         <div>
-          <a href="https://github.com/Augnos/portfolio/blob/master/src/components/challenges/BracketStacks.jsx" target="_blank" className='text-royal fs-3 fw-light'>GitHub</a>
+          <a href="https://github.com/Augnos/portfolio/blob/master/src/components/challenges/BracketStacks.jsx" target="_blank" className='text-royal fs-5 fw-light'>
+            See full component code on GitHub.
+          </a>
         </div>
 
       </div>

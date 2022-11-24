@@ -64,3 +64,9 @@ table * code {color: white}
     background-color: #eeee;
     background-blend-mode: overlay;
 }
+
+.img-project {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
