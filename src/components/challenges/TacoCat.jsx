@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
@@ -17,7 +17,7 @@ export default function TacoCat() {
     let chars = palindrome.replace(/[^a-zA-Z]+/g, '').toLowerCase();
 
     for (let i = 0; i < (chars.length / 2); i++) {
-      if (chars[i] != chars[chars.length - i - 1]) {
+      if (chars[i] !== chars[chars.length - i - 1]) {
         return setPalindrome("Not a palindrome")
       }
     }
@@ -36,7 +36,7 @@ export default function TacoCat() {
       for (let i = 0; i < (chars.length / 2); i++) {
 
         // if there's a mismatch, return false
-        if (chars[i] != chars[chars.length - i - 1]) {
+        if (chars[i] !== chars[chars.length - i - 1]) {
           return false
         }
       }
@@ -94,7 +94,7 @@ export default function TacoCat() {
         </div>
 
         <div>
-          <a href="https://github.com/Augnos/portfolio/blob/master/src/components/challenges/TacoCat.jsx" target="_blank" className='text-royal fs-5 fw-light'>
+          <a href="https://github.com/Augnos/portfolio/blob/master/src/components/challenges/TacoCat.jsx" rel="noreferrer" target="_blank" className='text-royal fs-5 fw-light'>
             See full component code on GitHub.
           </a>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container, Row, Col, } from "react-bootstrap";
+import { Container, Row, Col, } from "react-bootstrap";
 import { Route, Routes, NavLink } from 'react-router-dom';
 import BracketStacks from '../components/challenges/BracketStacks';
 import TacoCat from '../components/challenges/TacoCat';
@@ -22,10 +22,10 @@ export default function Challenges() {
         <Row className='justify-content-center mb-3'>
           <p>Choose below to load challenge.</p>
           <NavLink to="/challenges/bracketstacks" className='col-auto'>
-            <Button variant="orchid">BracketStacks</Button>
+            <div className='btn btn-royal text-lavender fs-5' >BracketStacks</div>
           </NavLink>
           <NavLink to="/challenges/tacocat" className='col-auto'>
-            <Button variant="orchid">TacocaT</Button>
+            <div className='btn btn-royal text-lavender fs-5' >TacocaT</div>
           </NavLink>
         </Row>
 

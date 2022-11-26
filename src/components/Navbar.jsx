@@ -1,7 +1,7 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
-export default () => {
+export default function Navigation() {
 
   return (
     <Navbar bg="midnight" variant="dark" expand="lg">

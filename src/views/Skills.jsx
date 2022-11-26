@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { FaPython, FaReact, FaBootstrap } from 'react-icons/fa';
 import { SiFlask, SiMysql } from 'react-icons/si';
 import { TbBrandHtml5, TbBrandJavascript, TbBrandCss3 } from 'react-icons/tb';
@@ -91,7 +91,7 @@ export default function Skills() {
 
             <Card.Body>
               <Card.Title>Python Development</Card.Title>
-              <Card.Text>I used Python to build a studio booking web application, which allows users to schedule and create events using Google Workspace resource calendars. You can see that project <a href='https://silversun.augnos.dev' className='text-blue' target="_blank">here</a>.</Card.Text>
+              <Card.Text>I used Python to build a studio booking web application, which allows users to schedule and create events using Google Workspace resource calendars. You can see that project <a href='https://silversun.augnos.dev' className='text-sky' rel="noreferrer" target="_blank">here</a>.</Card.Text>
             </Card.Body>
           </Card>
         </Col>

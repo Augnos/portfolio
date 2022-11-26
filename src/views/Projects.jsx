@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 export default function Projects() {
   return (
@@ -16,10 +16,10 @@ export default function Projects() {
 
           {/* Studio Card */}
           <Col sm={12} md={6} lg={4}>
-            <a href='https://silversun.augnos.dev' target="_blank" className='text-decoration-none'>
+            <a href='https://silversun.augnos.dev' rel="noreferrer" target="_blank" className='text-decoration-none'>
               <Card bg={"light"} text={"midnight"} className="my-3 py-2 mx-3 bg-gradient bg-opacity-50">
                 <div className='row justify-content-center align-items-center'>
-                  <img src='/images/silversun.png' className="img img-fluid img-project" />
+                  <img src='/images/silversun.png' alt="silversun studios project" className="img img-fluid img-project" />
                 </div>
                 <Card.Body>
                   <Card.Title className='text-orchid text-center'>Silversun Studios</Card.Title>
@@ -31,10 +31,10 @@ export default function Projects() {
 
           {/* Linktree Card */}
           <Col sm={12} md={6} lg={4}>
-            <a href='https://go.augnos.com' target="_blank" className='text-decoration-none'>
+            <a href='https://go.augnos.com' rel="noreferrer" target="_blank" className='text-decoration-none'>
               <Card bg={"light"} text={"midnight"} className="my-3 py-2 mx-3 bg-gradient bg-opacity-50">
                 <div className='row justify-content-center align-items-center'>
-                  <img src='/images/linktree.png' className="img img-fluid img-project" />
+                  <img src='/images/linktree.png' alt="linktree clone project" className="img img-fluid img-project" />
                 </div>
                 <Card.Body>
                   <Card.Title className='text-orchid text-center'>Linktree Clone</Card.Title>

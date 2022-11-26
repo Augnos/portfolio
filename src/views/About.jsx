@@ -3,18 +3,18 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 export default function About() {
   return (
-    <Container fluid className='my-auto'>
+    <Container fluid className='my-auto py-3'>
       <Row className='text-start align-items-center justify-content-evenly'>
 
         {/* Image Column */}
         <Col xs={8} lg={4}>
-          <img className='img img-fluid my-3' src='images/augnos_dev.jpeg' />
+          <img className='img img-fluid' alt="Joshua Valdez" src='images/augnos_dev.jpeg' />
         </Col>
 
         {/* Bio Column */}
         <Col xs={10} lg={6}>
-          <div className='text-center text-lg-start'>
-            <h1 className='text-purple'>Joshua Valdez</h1>
+          <div className='text-center text-lg-start my-3'>
+            <h1 className='text-purple'>Josh Valdez</h1>
             <h4 className='text-indigo fw-light'>Software Developer & Audio Engineer</h4>
           </div>
           <div className=''>

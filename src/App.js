@@ -12,15 +12,15 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="raleway min-vh-100 vw-100 d-flex flex-column">
+    <div className="raleway min-vh-100 d-flex flex-column">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="*" element={<NotFound />} />
         <Route path="/challenges/*" element={<Challenges />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div >
   );

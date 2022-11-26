@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
@@ -39,7 +39,7 @@ export default function BracketStacks() {
         detected = true;
         let popped = stack.pop();
         // return statement when closing bracket doesn't match previous bracket
-        if (pairedBracks[popped] != item) return setBalance("NOT balanced");
+        if (pairedBracks[popped] !== item) return setBalance("NOT balanced");
         continue;
       }
     }
@@ -83,7 +83,7 @@ export default function BracketStacks() {
           detected = true;
           let popped = stack.pop();
           // return statement when closing bracket doesn't match previous bracket
-          if (pairedBracks[popped] != item) return setBalance("NOT balanced");
+          if (pairedBracks[popped] !== item) return setBalance("NOT balanced");
           continue;
         }
       }
@@ -147,7 +147,7 @@ export default function BracketStacks() {
           <td><button type="button" className='btn btn-outline-midnight' onClick={() => isBalanced("")}>Clear</button></td>
         </div>
         <div>
-          <a href="https://github.com/Augnos/portfolio/blob/master/src/components/challenges/BracketStacks.jsx" target="_blank" className='text-royal fs-5 fw-light'>
+          <a href="https://github.com/Augnos/portfolio/blob/master/src/components/challenges/BracketStacks.jsx" rel="noreferrer" target="_blank" className='text-royal fs-5 fw-light'>
             See full component code on GitHub.
           </a>
         </div>
