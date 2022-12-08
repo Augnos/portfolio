@@ -1,4 +1,4 @@
-# Joshua Valdez - Portfolio
+# [Joshua Valdez - Portfolio](https://augnos.dev)
 
 Technologies used: JavaScript, React.js, Node.js, HTML5, CSS3, Sass, Bootstrap 5, React Bootstrap, AWS EC2
 
