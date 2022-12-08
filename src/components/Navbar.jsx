@@ -11,7 +11,7 @@ export default function Navigation() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto fs-5">
             <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-            <Nav.Link as={NavLink} to="/about">About</Nav.Link>
+            {/* <Nav.Link as={NavLink} to="/about">About</Nav.Link> */}
             <Nav.Link as={NavLink} to="/skills">Skills</Nav.Link>
             <Nav.Link as={NavLink} to="/projects">Projects</Nav.Link>
             <Nav.Link as={NavLink} to="/challenges">Coding Challenges</Nav.Link>
@@ -19,7 +19,7 @@ export default function Navigation() {
             <NavDropdown title="Contact" id="basic-nav-dropdown">
               <NavDropdown.Item href="https://linkedin.com/in/augnos" target="_blank">LinkedIn</NavDropdown.Item>
               <NavDropdown.Item href="https://github.com/augnos" target="_blank">GitHub</NavDropdown.Item>
-              <NavDropdown.Item href="https://docs.google.com/document/d/1xloDQsroSO-r-9ffeNDCQsj8gCF9tQvWTDCHFc99PTM/edit?usp=sharing" target="_blank">Resume</NavDropdown.Item>
+              <NavDropdown.Item href="https://drive.google.com/open?id=1pIvvcQO_FMqqXnflyQ578Mhd9zZVLyXy&authuser=josh%40augnos.com&usp=drive_fs" target="_blank">Resume</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

@@ -3,7 +3,7 @@ import "./style.css";
 
 import Navbar from "./components/Navbar";
 import Home from "./views/Home";
-import About from "./views/About";
+// import About from "./views/About";
 import Skills from "./views/Skills";
 import Projects from "./views/Projects";
 import Challenges from "./views/Challenges";
@@ -12,11 +12,11 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="raleway min-vh-100 d-flex flex-column">
+    <div className="raleway min-vh-100 d-flex flex-column justify-content-between">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        {/* <Route path="/about" element={<About />} /> */}
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/challenges/*" element={<Challenges />} />

@@ -1,30 +1,35 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 export default function About() {
   return (
     <Container fluid className='my-auto py-3'>
-      <Row className='text-start align-items-center justify-content-evenly'>
-
+      <Row className='text-start align-items-center justify-content-evenly mb-3'>
         {/* Image Column */}
-        <Col xs={8} lg={4}>
-          <img className='img img-fluid' alt="Joshua Valdez" src='images/augnos_dev.jpeg' />
+        <Col xs={10} lg={4} className="d-flex justify-content-center">
+          <img className='profile-pic img img-fluid' alt="Joshua Valdez" src='images/augnos_dev.jpeg' />
         </Col>
 
         {/* Bio Column */}
-        <Col xs={10} lg={6}>
+        <Col xs={10} lg={6} >
           <div className='text-center text-lg-start my-3'>
-            <h1 className='text-purple'>Josh Valdez</h1>
+            <h1>Hi, I'm <span className='text-royal'>Josh Valdez</span>.</h1>
             <h4 className='text-indigo fw-light'>Software Developer & Audio Engineer</h4>
           </div>
           <div className=''>
-            <p>I have 14 years of problem solving work experience, with roles in technical industries such as IT, audio engineering, semiconductor manufacturing, and nuclear power.</p>
-            <p>I've adopted the agile methodology as Facilities and Production manager, and was able to balance production recording and editing with a small team of engineers.</p>
-            <p>I'm passionate about developing full-stack web applications. Particularly, I'm interested in building tools and apps to help with management and organization. I'm especially interested in creating for the audio and visual media industries. </p>
-            <p>I'm looking for a challenging and exciting position, where my broad technical experience can be a powerful asset for your company.</p>
+            <p>I'm a web devoloper with a strong background in audio engineering and operations management. I code in <strong>JavaScript</strong>, <strong>C#</strong>, and <strong>Python</strong>.</p>
+            <p>I have 14 years of problem solving experience, with past roles in semiconductor manufacturing, nuclear power, and most recently audio and education.</p>
+            <p>I'm a lifelong creative, and passionate about coding. I'm particularly interested in building for audio and music, photography, and visual media.</p>
+            <p>When I'm not coding, you can find me <a href='https://augnos.com' target='_blank'>taking pictures</a> at a show, or <a href='https://augnos.bandcamp.com' target='_blank'>making vaporwave music</a>.</p>
           </div>
         </Col>
-
+      </Row>
+      <Row className="row d-flex justify-content-center text-center">
+        <Col xs={10} lg={6} as={NavLink} className="btn btn-royal text-white mb-3" to="/projects">Check out my projects!</Col>
+      </Row>
+      <Row className="row d-flex justify-content-center text-center">
+        <Col xs={10} lg={6} as={NavLink} className="btn btn-orchid text-white" to="/challenges">Play with the Coding Challenges!</Col>
       </Row>
     </Container>
   )

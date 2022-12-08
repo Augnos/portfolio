@@ -7,7 +7,7 @@ import { IconContext } from 'react-icons';
 
 export default function Skills() {
   return (
-    <Container fluid className='my-auto'>
+    <Container fluid className='my-auto py-3'>
 
       <Row className='m-3 text-start'>
         <h1 className=''>My Skills</h1>

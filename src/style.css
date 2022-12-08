@@ -10,8 +10,16 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.profile-pic {
+    border-radius: 100%;
+}
+
 .navbarstyle {
     z-index: 1000;
+}
+
+.silversun {
+    max-width: 300;
 }
 
 /* .text-red {

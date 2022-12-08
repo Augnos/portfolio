@@ -6,13 +6,13 @@ import TacoCat from '../components/challenges/TacoCat';
 
 export default function Challenges() {
   return (
-    <Container fluid className='mt-3'>
+    <Container fluid className='my-auto pt-3'>
 
       <Col className="mx-auto bg-lavender text-center">
 
         <Routes>
           <Route index element={
-            <div className='m-auto'>
+            <div className='m-auto col-lg-6 col-10'>
               <h1>Coding Challenges</h1>
               <p>Here are some commonly asked coding challenges and algorithms, solved with <span className='text-orchid fw-bold'>JavaScript</span> and displayed with <span className='text-primary fw-bold'>React</span> and <span className='text-royal fw-bold'>Bootstrap</span>.</p>
             </div>
