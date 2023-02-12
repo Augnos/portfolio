@@ -21,7 +21,7 @@ export default function About() {
             <p>I'm a web devoloper with a strong background in audio engineering and operations management. I code in <strong>JavaScript</strong>, <strong>C#</strong>, and <strong>Python</strong>.</p>
             <p>I have 14 years of problem solving experience, with past roles in semiconductor manufacturing, nuclear power, and most recently audio and education.</p>
             <p>I'm a lifelong creative, and passionate about coding. I'm particularly interested in building for audio and music, photography, and visual media.</p>
-            <p>When I'm not coding, you can find me <a href='https://augnos.com' target='_blank'>taking pictures</a> at a show, or <a href='https://augnos.bandcamp.com' target='_blank'>making vaporwave music</a>.</p>
+            <p>When I'm not coding, you can find me <a href='https://augnos.com' target='_blank' rel="noreferrer">taking pictures</a> at a show, or <a href='https://augnos.bandcamp.com' target='_blank' rel="noreferrer">making vaporwave music</a>.</p>
           </div>
         </Col>
       </Row>
