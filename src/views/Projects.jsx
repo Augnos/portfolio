@@ -50,7 +50,7 @@ export default function Projects() {
                 <img src='/images/linktree.png' alt="linktree clone project" className="img img-fluid img-project" />
               </div>
               <Card.Body>
-                <Card.Title className='text-orchid text-center'>Linktree Clone</Card.Title>
+                <Card.Title className='text-orchid text-center'>Promo Link Tree</Card.Title>
                 <Card.Text>
                   <h6 className='text-center'>
                     Python, Flask, HTML5, CSS3, Bootstrap 5, AWS EC2, Git, GitHub
@@ -59,10 +59,10 @@ export default function Projects() {
                     This application was created as a clone of a Linktree repository. Linktrees are used for social media profiles where typically only 1 link is allowed to be presented, such as Twitter and Instagram. Linktrees get around that limitation by presenting a simple website that hosts multiple important links for the user to share with visitors.
                   </p>
                   <p>
-                    This was my first application, and I'm actively using it to this day. My brand, Augnos, revolves around music and photography, and I update my "Linktree clone" regularly with photos and shows.
+                    This was my first application, and I'm actively using it to this day. My brand, Augnos, revolves around music and photography, and I update my "Linktree clone" regularly with new links to my work and upcoming events.
                   </p>
                   <p>
-                    As the first application I'd complete, I wanted to build something I would actually use, while also learning how to deploy and update a web application to be viewed anywhere on the internet. Building this app introduced me to working with Amazon Web Services, EC2 instances, SSL Certificates, and web servers like NGINX.
+                    Building this app introduced me to working with AWS EC2 instances, Linux and VIM, SSL Certificates, and web servers like NGINX.
                   </p>
                 </Card.Text>
               </Card.Body>
