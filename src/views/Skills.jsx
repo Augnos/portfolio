@@ -82,7 +82,7 @@ export default function Skills() {
 
             <Card.Body>
               <Card.Title>Sound Designer</Card.Title>
-              <Card.Text>Well versed with in sound synthesis and processing to recreate sound effects. Able to recreate sounds with samples using layering, pitch shifting, and time stretching.</Card.Text>
+              <Card.Text>Well versed with in sound synthesis and processing to design audio for games and visual media. Able to create new sounds using layering, pitch shifting, and time stretching of audio files.</Card.Text>
             </Card.Body>
           </Card>
         </Col>
