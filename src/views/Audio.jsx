@@ -5,15 +5,16 @@ export default function Audio() {
   return (
     <Container fluid className='my-auto py-3'>
 
+      {/* *************************** */}
+      {/* **** Professional Work **** */}
+      {/* *************************** */}
+
       {/* Title Row */}
       <Row className='m-3 text-start'>
         <h1 className='text-purple'>Professional Experience</h1>
         <p>Here's a list of audio work I have done I have done professionally, as studio manager or as a freelance audio engineer.</p>
       </Row>
 
-      {/* *************************** */}
-      {/* **** Professional Work **** */}
-      {/* *************************** */}
       <Row className="justify-content-evenly">
 
 
@@ -22,7 +23,7 @@ export default function Audio() {
           <Card bg={"light"} text={"midnight"} className="my-3 bg-gradient bg-opacity-50">
 
             <div className='mt-3 row justify-content-center align-items-center'>
-              <img src='/images/cortana.png' alt="microsoft cortana logo" className="img img-fluid silversun img-project" />
+              <img src='/images/cortana.png' alt="microsoft cortana logo" className="img img-fluid img-project" />
             </div>
 
             <Card.Body>
@@ -48,7 +49,7 @@ export default function Audio() {
           <Card bg={"light"} text={"midnight"} className="my-3 bg-gradient bg-opacity-50">
 
             <div className='mt-3 row justify-content-center align-items-center'>
-              <img src='/images/azella.png' alt="azella logo" className="img img-fluid silversun img-project" />
+              <img src='/images/azella.png' alt="azella logo" className="img img-fluid img-project" />
             </div>
 
             <Card.Body>
@@ -73,8 +74,8 @@ export default function Audio() {
         <Col sm={12} md={6} lg={6}>
           <Card bg={"light"} text={"midnight"} className="my-3 bg-gradient bg-opacity-50">
 
-            <div className='mx-3 row justify-content-center align-items-center'>
-              <img src='/images/pyramindlive.jpg' alt="private suite podcast logo" className="img img-fluid silversun img-project" />
+            <div className='mt-3 mx-3 row justify-content-center align-items-center'>
+              <img src='/images/pyramindlive.jpg' alt="private suite podcast logo" className="img img-fluid img-project" />
             </div>
 
             <Card.Body>
@@ -97,7 +98,7 @@ export default function Audio() {
           <Card bg={"light"} text={"midnight"} className="my-3 bg-gradient bg-opacity-50">
 
             <div className='row justify-content-center align-items-center'>
-              <img src='/images/mentormymix.png' alt="private suite podcast logo" className="mt-3 img img-fluid silversun img-project" />
+              <img src='/images/mentormymix.png' alt="private suite podcast logo" className="mt-3 img img-fluid img-project" />
             </div>
 
             <Card.Body>
@@ -120,7 +121,7 @@ export default function Audio() {
           <Card bg={"light"} text={"midnight"} className="my-3 bg-gradient bg-opacity-50">
 
             <div className='mt-3 row justify-content-center align-items-center'>
-              <img src='/images/psp.jpg' alt="private suite podcast logo" className="img img-fluid silversun img-project" />
+              <img src='/images/psp.jpg' alt="private suite podcast logo" className="img img-fluid img-project" />
             </div>
 
             <Card.Body>
@@ -144,12 +145,13 @@ export default function Audio() {
       {/* ************************** */}
 
       {/* put freelance work here
-      
-      
+
       <Row className='m-3 text-start'>
         <h1 className='text-purple'>Freelance Work</h1>
         <p>A list of music I have had the privelige and opportunity to work on.</p>
-      </Row> */}
+      </Row> 
+      
+      */}
 
 
     </Container>

@@ -4,18 +4,17 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 export default function Navigation() {
 
   return (
-    <Navbar bg="midnight" variant="dark" expand="lg">
+    <Navbar collapseOnSelect bg="midnight" variant="dark" expand="lg">
       <Container fluid className='mx-md-5'>
-        <Navbar.Brand as={NavLink} to="/" className='text-lavender fs-4'>Josh Valdez</Navbar.Brand>
+        <Navbar.Brand className='text-lavender fs-4'>Josh Valdez</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto fs-5">
-            <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-            {/* <Nav.Link as={NavLink} to="/about">About</Nav.Link> */}
-            <Nav.Link as={NavLink} to="/skills">Skills</Nav.Link>
-            <Nav.Link as={NavLink} to="/audio">Audio Experience</Nav.Link>
-            <Nav.Link as={NavLink} to="/projects">Dev Projects</Nav.Link>
-            <Nav.Link as={NavLink} to="/challenges">Code Challenges</Nav.Link>
+            <Nav.Link eventKey="1" as={NavLink} to="/">Home</Nav.Link>
+            <Nav.Link eventKey="2" as={NavLink} to="/skills">Skills</Nav.Link>
+            <Nav.Link eventKey="3" as={NavLink} to="/audio">Audio Experience</Nav.Link>
+            <Nav.Link eventKey="4" as={NavLink} to="/projects">Dev Projects</Nav.Link>
+            <Nav.Link eventKey="5" as={NavLink} to="/challenges">Code Challenges</Nav.Link>
 
             <NavDropdown title="Contact" id="basic-nav-dropdown">
               <NavDropdown.Item href="https://linkedin.com/in/augnos" target="_blank">LinkedIn</NavDropdown.Item>

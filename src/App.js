@@ -3,7 +3,6 @@ import "./style.css";
 
 import Navbar from "./components/Navbar";
 import Home from "./views/Home";
-// import About from "./views/About";
 import Skills from "./views/Skills";
 import Audio from "./views/Audio";
 import Projects from "./views/Projects";
@@ -17,7 +16,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} /> */}
         <Route path="/skills" element={<Skills />} />
         <Route path="/audio" element={<Audio />} />
         <Route path="/projects" element={<Projects />} />
