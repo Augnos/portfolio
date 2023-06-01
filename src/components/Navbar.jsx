@@ -13,7 +13,8 @@ export default function Navigation() {
             <Nav.Link as={NavLink} to="/">Home</Nav.Link>
             {/* <Nav.Link as={NavLink} to="/about">About</Nav.Link> */}
             <Nav.Link as={NavLink} to="/skills">Skills</Nav.Link>
-            <Nav.Link as={NavLink} to="/projects">Projects</Nav.Link>
+            <Nav.Link as={NavLink} to="/audio">Audio Work</Nav.Link>
+            <Nav.Link as={NavLink} to="/projects">Coding Projects</Nav.Link>
             <Nav.Link as={NavLink} to="/challenges">Coding Challenges</Nav.Link>
 
             <NavDropdown title="Contact" id="basic-nav-dropdown">
