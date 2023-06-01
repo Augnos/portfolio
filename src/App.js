@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./views/Home";
 // import About from "./views/About";
 import Skills from "./views/Skills";
+import Audio from "./views/Audio";
 import Projects from "./views/Projects";
 import Challenges from "./views/Challenges";
 import NotFound from "./views/NotFound";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* <Route path="/about" element={<About />} /> */}
         <Route path="/skills" element={<Skills />} />
+        <Route path="/audio" element={<Audio />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/challenges/*" element={<Challenges />} />
         <Route path="*" element={<NotFound />} />

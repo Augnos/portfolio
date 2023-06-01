@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
-export default function About() {
+export default function Home() {
   return (
     <Container fluid className='my-auto py-3'>
       <Row className='text-start align-items-center justify-content-evenly mb-3'>
